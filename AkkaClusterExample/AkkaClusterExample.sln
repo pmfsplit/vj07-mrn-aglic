@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaClusterExample", "AkkaClusterExample\AkkaClusterExample.csproj", "{CAD55F16-DDCF-4D1C-AD6C-75520646762D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaConfigProvider", "AkkaConfigProvider\AkkaConfigProvider.csproj", "{BA0D363C-20A4-4534-8782-0F932B5356A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAD55F16-DDCF-4D1C-AD6C-75520646762D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD55F16-DDCF-4D1C-AD6C-75520646762D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD55F16-DDCF-4D1C-AD6C-75520646762D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD55F16-DDCF-4D1C-AD6C-75520646762D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0D363C-20A4-4534-8782-0F932B5356A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0D363C-20A4-4534-8782-0F932B5356A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0D363C-20A4-4534-8782-0F932B5356A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0D363C-20A4-4534-8782-0F932B5356A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

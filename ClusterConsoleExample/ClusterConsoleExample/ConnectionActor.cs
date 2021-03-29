@@ -37,14 +37,16 @@ namespace ClusterConsoleExample
 
         private void SendIdentify(ClusterEvent.MemberUp up)
         {
+            if (up.Member.Address == _cluster.SelfMember.Address) return;
             var rootPath = new RootActorPath(up.Member.Address);
-            var selection = Context.ActorSelection(rootPath);
+            var selection = Context.ActorSelection($"{rootPath}/user/*");
 
             selection.Tell(new Identify("1"));
         }
 
         private void AddActor()
         {
+            Console.WriteLine($"Got response from {Sender}");
             _actorRefs.Add(Sender);
         }
 

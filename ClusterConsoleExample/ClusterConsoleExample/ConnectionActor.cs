@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Akka.Actor;
 using Akka.Cluster;
+using Messages;
 
 namespace ClusterConsoleExample
 {
@@ -15,6 +17,22 @@ namespace ClusterConsoleExample
 
             Receive<ClusterEvent.MemberUp>(up => SendIdentify(up));
             Receive<ActorIdentity>(identity => AddActor());
+
+            Receive<SaveToDatabase>(db => ForwardToAll(db));
+            Receive<SaveToDatabaseAck>(db => HandleAck(db));
+        }
+
+        private void HandleAck(SaveToDatabaseAck db)
+        {
+            Console.WriteLine($"[{Sender}] Save to database: {db.Id}");
+        }
+
+        private void ForwardToAll(SaveToDatabase db)
+        {
+            foreach (var actorRef in _actorRefs)
+            {
+                actorRef.Tell(db);
+            }
         }
 
         private void SendIdentify(ClusterEvent.MemberUp up)

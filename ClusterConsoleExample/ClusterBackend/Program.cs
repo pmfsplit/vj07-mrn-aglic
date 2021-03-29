@@ -20,6 +20,8 @@ namespace ClusterBackend
 
             using (var system = ActorSystem.Create("ClusterSystem", config))
             {
+                var props = Props.Create(() => new WorkerActor());
+                system.ActorOf(props);
                 Console.ReadLine();
                 system.Terminate().Wait();
             }

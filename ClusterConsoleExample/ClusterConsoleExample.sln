@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClusterConsoleExample", "ClusterConsoleExample\ClusterConsoleExample.csproj", "{6D67FEDD-BAFE-42AA-BE9F-9D434603F7F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClusterBackend", "ClusterBackend\ClusterBackend.csproj", "{C2049F9B-A2A4-4E10-B832-C9B236981EEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D67FEDD-BAFE-42AA-BE9F-9D434603F7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D67FEDD-BAFE-42AA-BE9F-9D434603F7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D67FEDD-BAFE-42AA-BE9F-9D434603F7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D67FEDD-BAFE-42AA-BE9F-9D434603F7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2049F9B-A2A4-4E10-B832-C9B236981EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2049F9B-A2A4-4E10-B832-C9B236981EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2049F9B-A2A4-4E10-B832-C9B236981EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2049F9B-A2A4-4E10-B832-C9B236981EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

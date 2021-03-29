@@ -12,7 +12,7 @@ namespace ClusterConsoleExample
             var configProvider = new ConfigProvider();
             var akkaConfig = configProvider.GetAkkaConfig<MyAkkaConfig>();
 
-            using (var system = ActorSystem.Create("ClusterSystem"))
+            using (var system = ActorSystem.Create("ClusterSystem", akkaConfig))
             {
                 Console.ReadLine();
                 system.Terminate().Wait();

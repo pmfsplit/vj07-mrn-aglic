@@ -1,4 +1,7 @@
 ﻿using System;
+using Akka.Actor;
+using AkkaConfigProvider;
+using SharedConfig;
 
 namespace ClusterConsoleExample
 {
@@ -6,7 +9,14 @@ namespace ClusterConsoleExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var configProvider = new ConfigProvider();
+            var akkaConfig = configProvider.GetAkkaConfig<MyAkkaConfig>();
+
+            using (var system = ActorSystem.Create("ClusterSystem"))
+            {
+                Console.ReadLine();
+                system.Terminate().Wait();
+            }
         }
     }
 }

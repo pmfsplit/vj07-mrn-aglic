@@ -5,4 +5,12 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AkkaConfigProvider" Version="0.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SharedConfig\SharedConfig.csproj" />
+    </ItemGroup>
+
 </Project>

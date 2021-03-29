@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SharedConfig
 {
@@ -8,21 +9,33 @@ namespace SharedConfig
         public ActorConfig Actor { get; set; }
         public class ActorConfig
         {
-         
+            [JsonProperty(PropertyName = "remote")]
+            public RemoteConfig Remote { get; set; }
+            [JsonProperty(PropertyName = "cluster")]
+            public ClusterConfig Cluster { get; set; }
+            
             public class RemoteConfig
             {
+                [JsonProperty(PropertyName = "dot-netty")]
+                public DotNettyConfig DotNetty { get; set; }
                 public class DotNettyConfig
                 {
+                    [JsonProperty(PropertyName = "tcp")]
+                    public TcpConfig Tcp { get; set; }
                     public class TcpConfig
                     {
-                        
+                        [JsonProperty(PropertyName = "port")]
+                        public int Port { get; set; }
+                        [JsonProperty(PropertyName = "hostname")]
+                        public string Hostname { get; set; }
                     }
                 }
             }
             
-            public class Cluster
+            public class ClusterConfig
             {
-                
+                [JsonProperty(PropertyName = "seed-nodes")]
+                public List<string> SeedNodes { get; set; }
             }
         }
     }

@@ -6,7 +6,6 @@ namespace ClusterBackend
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
